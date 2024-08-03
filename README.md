@@ -61,7 +61,7 @@ Feel free to fork this project and create your own awesome variations! If you ma
 
 ## 📜 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [MIT License](LICENSE.md).
 
 ---
 
