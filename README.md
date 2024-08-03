@@ -53,7 +53,7 @@ Welcome to Nebula Links, a DIY alternative to the popular Linktree service! This
 
 ## 📸 Screenrecording
 
-![VN20240803_22384](https://github.com/user-attachments/assets/67ec1aa4-0288-4279-80d0-ade3cbb69615)
+![IMG-20240803-WA0145](https://github.com/user-attachments/assets/ca47ab2d-2aeb-4465-ad65-dc4559c1ebda)
 
 ## 🤝 Contributing
 
