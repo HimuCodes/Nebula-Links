@@ -51,9 +51,9 @@ Welcome to Nebula Links, a DIY alternative to the popular Linktree service! This
 - Add more interactive elements or animations
 - Integrate with your own domain for a professional touch
 
-## 📸 Screenshots
+## 📸 Screenrecording
 
-
+![VN20240803_22384](https://github.com/user-attachments/assets/67ec1aa4-0288-4279-80d0-ade3cbb69615)
 
 ## 🤝 Contributing
 
