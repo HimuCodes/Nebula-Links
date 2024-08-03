@@ -1,8 +1,8 @@
-# 🚀 Cosmic Linktree: A DIY Space-Themed Link Hub
+# 🚀 Nebula Links: A DIY Space-Themed Link Hub
 
 ## 🌌 Overview
 
-Welcome to Cosmic Linktree, a DIY alternative to the popular Linktree service! This project was born out of a desire for customization without the price tag. When Linktree started charging for advanced customization, I decided to take matters into my own hands and create a unique, space-themed link hub that's out of this world!
+Welcome to Nebula Links, a DIY alternative to the popular Linktree service! This project was born out of a desire for customization without the price tag. When Linktree started charging for advanced customization, I decided to take matters into my own hands and create a unique, space-themed link hub that's out of this world!
 
 ## 🌟 Features
 
