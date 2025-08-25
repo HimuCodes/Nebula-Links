@@ -1,43 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>himucodes | Linktree Clone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/58747481d8.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <title>Nebula Links – Himu</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Himu's cosmic link hub" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="space-background"></div>
-<div class="stars"></div>
-<div class="container">
-    <div class="profile-picture"><img src="profile.jpg" alt="Himanshu Tiwari"></div>
-    <h1>Himanshu Tiwari</h1>
-    <p class="username">@himu</p>
-    <p class="bio">Embedded coder, web tinkerer, film geek, music prod. Exploring the multiverse of skills, one dimension at a time.</p>
-    <div class="top-links">
-        <a href="https://www.linkedin.com/in/himanshutiwari17/" class="top-link"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/HimuCodes" class="top-link"><i class="fab fa-github"></i></a>
-        <a href="mailto:himanshu.tiwari.17@outlook.com" class="top-link"><i class="fas fa-envelope"></i></a>
-        <a href="https://drive.google.com/file/d/1EPMvWfQ1q6JgZna5qi-CG_6UG7pyIYLE/view?usp=sharing" class="top-link"><i class="fas fa-file-alt"></i></a>
-    </div>
-    <div class="links">
-        <a href="https://www.instagram.com/audbhida/" class="link"><i class="fab fa-instagram"></i>Instagram</a>
-        <a href="https://x.com/audbhida" class="link"><i class="fab fa-twitter"></i>Twitter</a>
-        <a href="https://discord.com/users/510713457906024457" class="link"><i class="fab fa-discord"></i>Discord</a>
-        <a href="https://boxd.it/59In3" class="link"><i class="fas fa-film"></i>Letterboxd</a>
-         <a href="https://soundcloud.com/himumusic" class="link"><i class="fab fa-soundcloud"></i>SoundCloud</a>
-        <a href="https://open.spotify.com/user/31hbuvu7floclnteup4tifmx6urq?si=46aa5fa727fd4b8b" class="link"><i class="fab fa-spotify"></i>Spotify</a>
-        <a href="https://fosstodon.org/@himu" class="link"><i class="fab fa-mastodon"></i>Mastodon</a>
-    </div>
-    <div class="resume-section">
-        <h2>Resume</h2>
-        <a href="https://drive.google.com/file/d/1EPMvWfQ1q6JgZna5qi-CG_6UG7pyIYLE/view?usp=sharing" class="link resume-link"><i class="fas fa-file-pdf"></i>Download Resume</a>
-    </div>
-    <p class="footer">Made with ❤️ by himu</p>
+<!-- Ambient nebula color wash -->
+<div class="ambient-nebula" aria-hidden="true"></div>
+<!-- Subtle perspective grid / wireframe background -->
+<div class="cosmic-grid" aria-hidden="true"></div>
+<!-- Geometric spinning shapes -->
+<div class="bg-shapes" aria-hidden="true">
+    <div class="shape shape-square"></div>
+    <div class="shape shape-triangle"></div>
+    <div class="shape shape-hexagon"></div>
 </div>
+<!-- Starfield root (stars + shooting stars injected) -->
+<div class="starfield" id="starfield" aria-hidden="true"></div>
+
+<main class="main">
+    <section class="profile-card profile-card--glassless" aria-labelledby="user-name">
+        <div class="card-frame" aria-hidden="true"></div>
+        <header class="profile-header">
+            <div class="avatar-wrapper">
+                <img class="avatar" src="profile.jpg" alt="Himu avatar" decoding="async" />
+            </div>
+            <h1 id="user-name" class="name">Himu</h1>
+            <p class="tagline">Building ambient cosmic experiences & elegant code.</p>
+        </header>
+
+        <nav class="links" aria-label="Primary">
+            <a class="cta-portfolio" href="https://himu.me" target="_blank" rel="noopener" aria-label="Open Himu's portfolio website">
+                <span class="cta-bg-stars" aria-hidden="true"></span>
+                <span class="cta-aurora" aria-hidden="true"></span>
+                <span class="cta-outline" aria-hidden="true"></span>
+                <span class="cta-label">Portfolio</span>
+            </a>
+        </nav>
+
+        <div class="socials" aria-label="Social media and contacts">
+            <a href="https://github.com/HimuCodes" aria-label="GitHub" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.1s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/audbhida/" aria-label="Instagram" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.2s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://x.com/audbhida" aria-label="X (Twitter)" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.3s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/himanshutiwari17/" aria-label="LinkedIn" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.4s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:himanshu.tiwari.17@outlook.com" aria-label="Email" class="social-link" style="--stagger-delay: 0.5s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path fill="currentColor" d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+            </a>
+            <a href="https://soundcloud.com/himumusic" aria-label="SoundCloud" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.6s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.053 0 .094-.04.101-.098l.262-2.105-.262-2.154c-.007-.057-.048-.1-.101-.1zm1.49.876c-.055 0-.094.046-.101.098l-.174 1.277.174 1.204c.007.055.046.098.101.098.057 0 .096-.043.101-.098l.204-1.204-.204-1.277c-.005-.055-.044-.098-.101-.098zm1.49-1.226c-.057 0-.1.041-.1.098l-.145 2.508.145 2.392c0 .057.043.098.1.098.055 0 .098-.041.098-.098l.174-2.392-.174-2.508c0-.057-.045-.098-.098-.098zm1.49-1.4c-.058 0-.1.046-.1.1l-.116 3.91.116 3.737c0 .058.042.1.1.1.056 0 .1-.042.1-.1l.144-3.737-.144-3.91c0-.057-.046-.1-.1-.1zm1.49-1.765c-.061 0-.1.046-.1.1l-.087 5.665.087 5.543c0 .058.039.1.1.1.059 0 .1-.045.1-.1l.116-5.543-.116-5.665c0-.057-.041-.1-.1-.1zm1.49-1.143c-.061 0-.1.046-.1.098l-.058 6.81.058 6.68c0 .055.039.098.1.098.059 0 .1-.041.1-.098l.087-6.68-.087-6.81c0-.055-.041-.098-.1-.098zm1.49-.725c-.062 0-.101.041-.101.098l-.029 7.533.029 7.301c0 .057.039.1.101.1.058 0 .1-.045.1-.1l.058-7.301-.058-7.533c0-.057-.042-.098-.1-.098zm1.49-.29c-.067 0-.1.042-.1.1v15.565c0 .057.033.098.1.098.065 0 .1-.041.1-.098V9.517c0-.058-.035-.1-.1-.1zm4.519 0c-.036 0-.07.014-.09.039-.02.025-.029.058-.021.09l1.115 14.737-1.115 1.639c-.008.032.001.065.021.09.02.025.054.039.09.039.064 0 .1-.036.1-.1V9.517c0-.064-.036-.1-.1-.1zm1.79.58c-.061 0-.1.041-.1.098l-.144 6.045.144 5.665c0 .057.039.1.1.1.058 0 .1-.045.1-.1l.174-5.665-.174-6.045c0-.057-.042-.098-.1-.098zm1.49 1.0c-.058 0-.1.046-.1.098l-.116 5.043.116 4.82c0 .055.042.098.1.098.057 0 .1-.041.1-.098l.144-4.82-.144-5.043c0-.055-.045-.098-.1-.098zm1.49 1.7c-.061 0-.1.045-.1.098l-.087 3.344.087 3.201c0 .055.039.098.1.098.058 0 .1-.041.1-.098l.116-3.201-.116-3.344c0-.055-.042-.098-.1-.098z"/></svg>
+            </a>
+            <a href="https://open.spotify.com/user/31hbuvu7floclnteup4tifmx6urq?si=46aa5fa727fd4b8b" aria-label="Spotify" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.7s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            </a>
+            <a href="https://boxd.it/59In3" aria-label="Letterboxd" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.8s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.138 3C5.316 3 3.03 5.285 3.03 8.108c0 2.822 2.286 5.107 5.108 5.107 2.823 0 5.108-2.285 5.108-5.107C13.246 5.285 10.96 3 8.138 3zm7.724 0c-2.822 0-5.108 2.285-5.108 5.108 0 2.822 2.286 5.107 5.108 5.107C18.684 13.215 20.97 10.93 20.97 8.108 20.97 5.285 18.684 3 15.862 3zM8.138 10.8c-1.49 0-2.692-1.204-2.692-2.692 0-1.49 1.202-2.693 2.692-2.693 1.488 0 2.692 1.203 2.692 2.693 0 1.488-1.204 2.692-2.692 2.692zm7.724 0c-1.49 0-2.693-1.204-2.693-2.692 0-1.49 1.203-2.693 2.693-2.693 1.488 0 2.692 1.203 2.692 2.693 0 1.488-1.204 2.692-2.692 2.692zm-3.862 7.2c-2.822 0-5.108 2.285-5.108 5.108C6.892 25.93 9.178 28.215 12 28.215c2.822 0 5.108-2.285 5.108-5.107C17.108 20.285 14.822 18 12 18zm0 7.8c-1.49 0-2.693-1.204-2.693-2.692C9.307 21.618 10.51 20.415 12 20.415c1.488 0 2.692 1.203 2.692 2.693C14.692 24.596 13.488 25.8 12 25.8z"/></svg>
+            </a>
+            <a href="https://discord.com/users/510713457906024457" aria-label="Discord" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 0.9s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+            <a href="https://fosstodon.org/@himu" aria-label="Mastodon" target="_blank" rel="me noopener" class="social-link" style="--stagger-delay: 1.0s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/></svg>
+            </a>
+            <a href="/resume.pdf" aria-label="Resume" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 1.1s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg>
+            </a>
+            <a href="https://music.himu.me" aria-label="Music" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 1.2s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            </a>
+            <a href="https://himu.me/blog" aria-label="Website" target="_blank" rel="noopener" class="social-link" style="--stagger-delay: 1.3s">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+            </a>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="starfield.js"></script>
 </body>
 </html>
