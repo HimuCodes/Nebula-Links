@@ -21,15 +21,19 @@
 
 * { box-sizing:border-box; -webkit-font-smoothing:antialiased; }
 
-html,body { height:100%; margin:0; }
+html,body {
+    height:100%;
+    margin:0;
+    overflow: hidden; /* Disable all scrolling */
+}
 
 body {
     font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Ubuntu','Cantarell',sans-serif;
     background:
             radial-gradient(circle at 35% 20%,#141b2a 0%,#0a0e15 55%,#05060A 100%);
     color:var(--text-primary);
-    overflow-x:hidden;
-    min-height:100vh;
+    overflow:hidden; /* Disable scrolling */
+    height:100vh; /* Ensure full viewport height */
     position:relative;
 }
 
@@ -50,8 +54,9 @@ body::after {
     display:flex;
     align-items:center;
     justify-content:center;
-    min-height:100dvh;
+    height:100vh; /* Use viewport height instead of min-height */
     padding:clamp(1.2rem,2vw,2.4rem);
+    overflow:hidden; /* Prevent any overflow */
 }
 
 /* New cosmic grid / wireframe layer */
@@ -346,6 +351,82 @@ body::after {
 .starfield { position:fixed; inset:0; z-index:1; }
 .main { position:relative; z-index:10; }
 
+/* Mobile optimization - disable heavy animations on small screens and mobile devices */
+@media (max-width: 768px) {
+    /* Disable heavy animations on mobile */
+    .cosmic-grid {
+        animation: none !important;
+        transform: none !important;
+        opacity: 0.3;
+    }
+
+    .ambient-nebula {
+        animation: none !important;
+        transform: none !important;
+        opacity: 0.4;
+    }
+
+    .shape {
+        animation: none !important;
+        transform: translate(-50%, -50%) !important;
+        opacity: 0.15;
+    }
+
+    .card-frame::before {
+        animation: none !important;
+    }
+
+    .card-frame::after {
+        animation: none !important;
+    }
+
+    .avatar-wrapper::before,
+    .avatar-wrapper::after {
+        animation: none !important;
+    }
+
+    .cta-portfolio .cta-bg-stars {
+        animation: none !important;
+    }
+
+    .star.twinkle {
+        animation: none !important;
+    }
+
+    /* Reduce blur effects that are expensive on mobile */
+    .ambient-nebula {
+        filter: blur(20px) saturate(120%);
+    }
+
+    .card-frame::after {
+        filter: blur(20px);
+    }
+
+    .cta-portfolio .cta-aurora {
+        filter: blur(12px) saturate(120%);
+    }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .cosmic-grid,
+    .ambient-nebula,
+    .shape,
+    .card-frame::before,
+    .card-frame::after,
+    .avatar-wrapper::before,
+    .avatar-wrapper::after,
+    .cta-portfolio .cta-bg-stars,
+    .star.twinkle {
+        animation: none !important;
+    }
+}
 
 /* Utilities & small screens */
 @media (max-width:560px) {
