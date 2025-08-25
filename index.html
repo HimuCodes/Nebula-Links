@@ -3,41 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>himucodes | Linktree Clone</title>
+    <title>himu | Noise Weaver</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/58747481d8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="space-background"></div>
-<div class="stars"></div>
-<div class="container">
-    <div class="profile-picture"><img src="profile.jpg" alt="Himanshu Tiwari"></div>
-    <h1>Himanshu Tiwari</h1>
-    <p class="username">@himu</p>
-    <p class="bio">Embedded coder, web tinkerer, film geek, music prod. Exploring the multiverse of skills, one dimension at a time.</p>
-    <div class="top-links">
-        <a href="https://www.linkedin.com/in/himanshutiwari17/" class="top-link"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/HimuCodes" class="top-link"><i class="fab fa-github"></i></a>
-        <a href="mailto:himanshu.tiwari.17@outlook.com" class="top-link"><i class="fas fa-envelope"></i></a>
-        <a href="https://drive.google.com/file/d/1EPMvWfQ1q6JgZna5qi-CG_6UG7pyIYLE/view?usp=sharing" class="top-link"><i class="fas fa-file-alt"></i></a>
+    <!-- Cosmic Background -->
+    <div class="cosmic-background">
+        <div class="star-field"></div>
     </div>
-    <div class="links">
-        <a href="https://www.instagram.com/audbhida/" class="link"><i class="fab fa-instagram"></i>Instagram</a>
-        <a href="https://x.com/audbhida" class="link"><i class="fab fa-twitter"></i>Twitter</a>
-        <a href="https://discord.com/users/510713457906024457" class="link"><i class="fab fa-discord"></i>Discord</a>
-        <a href="https://boxd.it/59In3" class="link"><i class="fas fa-film"></i>Letterboxd</a>
-         <a href="https://soundcloud.com/himumusic" class="link"><i class="fab fa-soundcloud"></i>SoundCloud</a>
-        <a href="https://open.spotify.com/user/31hbuvu7floclnteup4tifmx6urq?si=46aa5fa727fd4b8b" class="link"><i class="fab fa-spotify"></i>Spotify</a>
-        <a href="https://fosstodon.org/@himu" class="link"><i class="fab fa-mastodon"></i>Mastodon</a>
-    </div>
-    <div class="resume-section">
-        <h2>Resume</h2>
-        <a href="https://drive.google.com/file/d/1EPMvWfQ1q6JgZna5qi-CG_6UG7pyIYLE/view?usp=sharing" class="link resume-link"><i class="fas fa-file-pdf"></i>Download Resume</a>
-    </div>
-    <p class="footer">Made with ❤️ by himu</p>
-</div>
+    
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <!-- Geometric Background Elements -->
+            <svg class="geometric-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+                <defs>
+                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff10;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ffffff05;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <polygon points="50,100 150,80 120,150" stroke="url(#lineGradient)" stroke-width="1" fill="none" opacity="0.6" />
+                <line x1="200" y1="200" x2="350" y2="150" stroke="url(#lineGradient)" stroke-width="1" opacity="0.4" />
+                <polygon points="300,350 380,300 350,400 270,380" stroke="url(#lineGradient)" stroke-width="1" fill="none" opacity="0.3" />
+            </svg>
+            
+            <header class="profile-header">
+                <!-- Profile Avatar -->
+                <div class="avatar-container">
+                    <img src="profile.jpg" alt="himu" class="avatar" />
+                </div>
+                
+                <!-- Profile Info -->
+                <div class="profile-info">
+                    <p class="tagline" aria-label="Role">NOISE WEAVER</p>
+                    <h1 class="display-name">himu</h1>
+                </div>
+            </header>
+            
+            <!-- Bio Section -->
+            <section class="bio-section">
+                <p class="bio">Embedded coder, web tinkerer, film geek, music prod. Exploring the multiverse of skills, one dimension at a time.</p>
+            </section>
+            
+            <!-- Primary CTA -->
+            <section class="cta-section">
+                <a href="https://soundcloud.com/himumusic" class="primary-cta" aria-label="Listen to my music on SoundCloud">
+                    <i class="fas fa-music" aria-hidden="true"></i>
+                    Listen Now
+                </a>
+            </section>
+            
+            <!-- Divider -->
+            <hr class="section-divider" />
+            
+            <!-- Social Links -->
+            <nav class="social-nav" aria-label="Social media and contact links">
+                <div class="social-grid">
+                    <a href="https://x.com/audbhida" class="social-link" aria-label="Follow me on X (Twitter)">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/HimuCodes" class="social-link" aria-label="View my GitHub projects">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/audbhida/" class="social-link" aria-label="Follow me on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/himanshutiwari17/" class="social-link" aria-label="Connect with me on LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:himanshu.tiwari.17@outlook.com" class="social-link" aria-label="Send me an email">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://soundcloud.com/himumusic" class="social-link" aria-label="Listen on SoundCloud">
+                        <i class="fab fa-soundcloud" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://open.spotify.com/user/31hbuvu7floclnteup4tifmx6urq?si=46aa5fa727fd4b8b" class="social-link" aria-label="Follow me on Spotify">
+                        <i class="fab fa-spotify" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://boxd.it/59In3" class="social-link" aria-label="View my film reviews on Letterboxd">
+                        <i class="fas fa-film" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://discord.com/users/510713457906024457" class="social-link" aria-label="Connect on Discord">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://fosstodon.org/@himu" class="social-link" aria-label="Follow me on Mastodon">
+                        <i class="fab fa-mastodon" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1EPMvWfQ1q6JgZna5qi-CG_6UG7pyIYLE/view?usp=sharing" class="social-link" aria-label="Download my resume">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Visit my personal website">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="animation.js"></script>
 </body>
 </html>
